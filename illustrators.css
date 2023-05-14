@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    max-width: 98rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+body{
+    background-color: rgba(236, 236, 236, 0.4); 
+}
+header{
+    width: 100%;
+    height: 80px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+a{
+    text-decoration: none;
+
+}
+.navbar{
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+.logo::first-letter{
+    font-size: 40px;
+    border: 2px solid black;
+    border-right: transparent;
+    padding-left: 5px;
+    color:#e7adf0;
+}
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px 80px;
+}
+nav ul li a{
+    color: #000;
+    position: relative;
+    padding: 5px 0;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    color:#e7adf0;
+}
+nav ul li a::after{
+    content: "";
+    bottom: 0;
+    left:0;
+    width:0;
+    position: absolute;
+    height: 3px;
+    background: #e7adf0;
+    transition: .3s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+/*hero*/
+.hero{
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    position: relative;
+    top: 60px;
+    padding: 0 1.5rem;
+}
+.main-message{
+    width: 100%;
+    max-width: 50rem;
+    color: #ece4eb;
+    transform: translateY(20%);
+}
+.main-message h1{
+    font-size: 4rem; 
+    font-weight: bold;
+    margin: 1rem 0 ;   
+}
+.main-message p{
+    font-size: 1.4rem;
+}
+.btn{
+    background-color: #ece4eb;
+    border-radius: 2rem;
+    color:rgb(0, 0, 0);
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem 2rem;
+}
+/*card*/
+.esposizione{
+    padding: 0;
+    
+}
+.title-heanding{ 
+    position: relative;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #000;
+    
+}
+.title-heanding h2{
+    font-size: 1.4rem;
+    padding: 6rem;
+    margin: 10rem 0 1rem;
+}
+.activities-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 1rem;
+}
+.activities-grid-item-card{
+    width: 300px;
+    aspect-ratio: 3 / 4;
+    border-radius: 10px;
+    margin: 0 auto;
+    
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+/*artista foto*/
+.artists{
+    width: 100%;
+    height: 70vh;
+    background: linear-gradient(135deg, rgba(72,56,149,0.9) 0%, rgba(233,235,248,0.8)100%);
+    position: relative;
+    top: 10rem;
+}
+.artist{
+    width: 100%;
+    color: #fafafa;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+.artist-text-box{
+    margin-bottom: 2rem;
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 3rem;
+    margin: 4rem 0 1rem;
+    text-align: center;
+}
+.artist-foto img{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 100%;
+    border: 3px solid #eb648c;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+}
+/*paragrafo*/
+.title-paragraph{
+    margin-bottom: 2rem;
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 10rem;
+    margin: 5rem 0 1rem;
+    text-align: center;
+}
+.title-paragraph p{
+    color: #000;
+    margin-bottom: 2rem;
+    padding: 6rem;
+    font-weight: normal;
+    text-align: left;
+}
+footer{
+    padding: 2.5rem 0;
+    background-color: #695a84;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    word-spacing: 30px;
+
+ }
+
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+    nav ul li{padding: 30px 40px;}
+    nav ul li a{
+        position: absolute;
+        font-size: 15px;}
+    .logo{
+        font-size: 18px;
+        margin-top: 0.8rem;}
+    .logo::first-letter{font-size: 28px;}
+    .main-message h1{font-size: 2rem;}
+    .main-message p{
+        font-size: 15px;
+        max-width: 70%;}
+    .artist-text-box{font-size: 1rem;}
+    .title-paragraph{font-size: 1.2rem;
+        padding: 5rem;
+        margin-top: 8rem;}
+    .title-paragraph p{
+        padding: 1rem;
+        font-size: 1rem;
+        text-align: left;}
+    footer{
+        padding: 2rem 0;
+        font-size: 18px;
+        word-spacing: 20px;}
+}
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    nav ul li{padding: 30px 40px;}
+    nav ul li a{
+        position: absolute;
+        font-size: 15px;}
+    .logo{
+        font-size: 18px;
+        margin-top: 0.8rem;}
+    .logo::first-letter{font-size: 28px;}
+    .main-message h1{
+        font-size: 2.5rem;
+
+    }
+    .main-message p{
+        font-size: 1rem;
+        max-width: 70%;}
+    .artist-text-box{font-size: 1rem;}
+    .title-paragraph{font-size: 1.2rem;
+        padding: 5rem;
+        margin-top: 8rem;}
+    .title-paragraph p{
+        padding: 1rem;
+        font-size: 1rem;
+        text-align: left;}
+    footer{
+        padding: 2rem 0;
+        font-size: 12px;
+        word-spacing: 30px;}
+}
+ /* Large devices (laptops/desktops, 992px and up)*/
+  @media only screen and (min-width: 992px) {
+    nav ul li{padding: 30px 70px;}
+    nav ul li a{
+        position: absolute;
+        font-size: 18px;}
+    .logo{
+        font-size: 24px;
+        margin-top: 5px;}
+    .logo::first-letter{font-size: 32px;}
+    .main-message h1{font-size: 3rem;}
+    .main-message p{
+        font-size: 1.4rem;
+        max-width: 70%;}
+    .artist-text-box{font-size: 1.4rem;}
+    .title-paragraph{font-size: 1.4rem;
+        padding: 4rem;
+        margin-top: 10rem;}
+    .title-paragraph p{
+        padding: 5rem;
+        font-size: 1.2rem;
+        text-align: left;}
+    footer{
+        padding: 2.5rem 0;
+        font-size: 15px;
+        word-spacing: 20px;}
+  } 
+  
+/* Extra large devices (large laptops and desktops, 1200px and up)*/
+  @media only screen and (min-width: 1200px) {
+    nav ul li{padding: 10px 80px;}
+    nav ul li a{
+        padding: 5px 0;
+        position: absolute;}
+    .logo{font-size: 30px;}
+    .logo::first-letter{font-size: 40px;}
+    .main-message h1{font-size: 4rem;}
+    .main-message p{
+        font-size: 1.4rem;
+        max-width: 100%;}
+    .artist-text-box{font-size: 1.4rem;}
+    .title-paragraph{font-size: 1.4rem;
+        padding: 10rem;
+        margin: 5rem 0 1rem;}
+    .title-paragraph p{
+        padding: 6rem;
+        font-size: 1.2rem;
+        text-align: left;}
+    footer{
+        padding: 2.5rem 0;
+        font-size: 20px;
+        word-spacing: 30px;}
+  } 
+
+ 
+
+
